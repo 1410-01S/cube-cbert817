@@ -55,7 +55,44 @@ public class Rubik {
         String[] solver = new String[scramble.length];
 
         for(int i = 0, j = (scramble.length - 1); i < scramble.length; i++, j--){
-            solver[i] = scramble[j];
+            switch(scramble[j]){
+                case "U":
+                    solver[i] = "U\'";
+                    break;
+                case "D":
+                solver[i] = "D\'";
+                    break;
+                case "R":
+                solver[i] = "R\'";
+                    break;
+                case "L":
+                solver[i] = "L\'";
+                    break;
+                case "F":
+                solver[i] = "F\'";
+                    break;
+                case "B":
+                solver[i] = "B\'";
+                    break;
+                case "U\'":
+                    solver[i] = "U";
+                    break;
+                case "D\'":
+                solver[i] = "D";
+                    break;
+                case "R\'":
+                solver[i] = "R";
+                    break;
+                case "L\'":
+                solver[i] = "L";
+                    break;
+                case "F\'":
+                solver[i] = "F";
+                    break;
+                case "B\'":
+                solver[i] = "B";
+                    break;
+            }
         }
 
         System.out.print("Moves to Unscramble Cube: ");
